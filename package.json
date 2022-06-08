@@ -1,0 +1,35 @@
+{
+  "name": "ong",
+  "version": "0.0.0",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite",
+    "preview": "vite preview --port 4173",
+    "start": "concurrently --kill-others \"nodemon ./src/server.js\" \"npm run dev\""
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.1.1",
+    "@fortawesome/free-regular-svg-icons": "^6.1.1",
+    "@fortawesome/free-solid-svg-icons": "^6.1.1",
+    "autoprefixer": "^10",
+    "body-parser": "^1.20.0",
+    "concurrently": "^7.2.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "express-vue": "^5.16.0",
+    "nodemon": "^2.0.16",
+    "pg": "^8.7.3",
+    "postcss": "^8",
+    "tailwindcss": "^3",
+    "vue": "^3.2.36",
+    "vue-router": "^4.0.15",
+    "webpack-manifest-plugin": "^5.0.0",
+    "webpack-node-externals": "^3.0.0"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^6.1.1",
+    "@vitejs/plugin-vue": "^2.3.3",
+    "vite": "^2.9.9",
+    "vue-cli-plugin-tailwind": "~3.0.0"
+  }
+}
