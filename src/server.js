@@ -1,5 +1,6 @@
 
 const express = require("express");
+const serveStatic = require("serve-static")
 const bodyParser = require('body-parser');
 const path = require('path');
 const cors = require('cors');
@@ -7,7 +8,10 @@ const cors = require('cors');
 const ongRoutes = require("./ong/routes.js");
 
 const app = express();
-const port = process.env.PORT || 8000;
+//const port = process.env.PORT || 8000;
+
+app.use(serveStatic(path.join(__dirname, 'dist')));
+const port = process.env.PORT || 3000;
 
 app.use(cors());
 
