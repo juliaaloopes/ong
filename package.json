@@ -5,7 +5,7 @@
     "build": "vite build",
     "dev": "vite",
     "preview": "vite preview --port 4173",
-    "start": "concurrently --kill-others \"nodemon ./src/server.js\" \"npm run dev\"",
+    "start": "npm run dev",
     "postinstall": "npm run build"
   },
   "dependencies": {
