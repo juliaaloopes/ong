@@ -3,6 +3,7 @@
 
 import {reactive, toRefs, computed} from "vue";
 
+
 export default {
   data() {
     return {
@@ -11,9 +12,12 @@ export default {
     }
   },
   mounted() {
-    fetch("http://localhost:8000/api/ong/animal")
+
+    fetch("/ong/animal")
     .then(res => res.json())
     .then(data => {
+
+      console.log(data)
       this.animais = data;
 
       data = data.map(el => {
@@ -37,7 +41,7 @@ export default {
 <template>
   <div id="animais" class="rounded-lg m-10 px-12">
     
-    <h1 class="font-medium leading-tight text-5xl mt-0 mb-2 ">Animais</h1>
+    <h1 class="font-medium leading-tight text-5xl mt-0 mb-2 ">Animaiss</h1>
 
     <ul class="divide-y divide-gray-100">
       <li class="px-4 pt-4 mt-3 text-2xl text-center">

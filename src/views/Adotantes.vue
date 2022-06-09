@@ -10,7 +10,7 @@ export default {
     }
   },
   mounted() {
-    fetch("http://localhost:8000/api/ong/adotante")
+    fetch("ong/adotante")
     .then(res => res.json())
     .then(data => {
       this.adotantes = data;

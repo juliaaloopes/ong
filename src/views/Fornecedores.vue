@@ -10,7 +10,7 @@ export default {
     }
   },
   mounted() {
-    fetch("http://localhost:8000/api/ong/fornecedores")
+    fetch("/ong/fornecedores")
     .then(res => res.json())
     .then(data => {
       this.fornecedores = data;
