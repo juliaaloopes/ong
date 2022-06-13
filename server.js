@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const cors = require('cors');
 
-const ongRoutes = require("./src/ong/routes.js");
+const ongRoutes = require("./src/ong/routes");
 
 const animal = require('./src/ong/animal');
 
