@@ -25,18 +25,18 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 
-app.get('/', function(req, res) {
+app.get(/.*/, function(req, res) {
     res.sendFile(__dirname + "/index.html");
 })
 
-app.get('/animais', function(req, res) {
+/*app.get('/animais', function(req, res) {
     res.sendFile(__dirname + "/index.html");
 })
 
-/*app.get('/ong/animal', function(req, res) {
+app.get('/ong/animal', function(req, res) {
     res.send({status: 200});
 })*/
 
-app.use('/ong', ongRoutes);
+//app.use('/ong', ongRoutes);
 
 app.listen(port, () => console.log(`app listening on port ${port}`));
