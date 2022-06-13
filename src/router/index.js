@@ -1,9 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-const animal = require('./animal');
+import ongRoute from '../ong/routes';
 
 
-const router = createRouter({
+const routes = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
@@ -20,11 +19,6 @@ const router = createRouter({
       path: '/animais',
       name: 'animais',
       component: () => import('../views/Animais.vue')
-    },
-    {
-      path: '/ong/animais',
-      name: 'animaisData',
-      component: animal.getAnimal
     },
     {
       path: '/adotantes',
@@ -63,5 +57,12 @@ const router = createRouter({
     }
   ]
 })
+
+
+
+const router = createRouter({
+  history: createWebHistory(),
+  routes,
+});
 
 export default router
