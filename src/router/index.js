@@ -14,7 +14,7 @@ const router = createRouter({
     {
       path: '/about',
       name: 'about',
-      component: () => animal.getAnimal
+      component: () => import('../views/About.vue')
     },
     {
       path: '/animais',
@@ -24,7 +24,7 @@ const router = createRouter({
     {
       path: '/ong/animais',
       name: 'animaisData',
-      component: () => import('../views/Animais.vue')
+      component: animal.getAnimal
     },
     {
       path: '/adotantes',

@@ -2,6 +2,7 @@ const pool = require('../../db');
 const queries = require('./queries');
 
 const getAnimal = (req, res) => {
+    console.log('2');
     pool.query(queries.getAnimal, (error, results) => {
         if (error) throw error;
         res.status(200).json(results.rows);
