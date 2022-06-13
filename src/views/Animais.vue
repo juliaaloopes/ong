@@ -13,7 +13,7 @@ export default {
   },
   mounted() {
 
-    fetch("/ong/animal")
+    fetch("ec2-3-226-163-72.compute-1.amazonaws.com/ong/animal")
     .then(res => res.json())
     .then(data => {
 
