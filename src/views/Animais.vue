@@ -13,7 +13,7 @@ export default {
   },
   mounted() {
 
-    fetch("ec2-3-226-163-72.compute-1.amazonaws.com/ong/animal")
+    fetch("/ong/animal")
     .then(res => res.json())
     .then(data => {
 
@@ -41,7 +41,7 @@ export default {
 <template>
   <div id="animais" class="rounded-lg m-10 px-12">
     
-    <h1 class="font-medium leading-tight text-5xl mt-0 mb-2 ">Animaiss</h1>
+    <h1 class="font-medium leading-tight text-5xl mt-0 mb-2 ">Animais</h1>
 
     <ul class="divide-y divide-gray-100">
       <li class="px-4 pt-4 mt-3 text-2xl text-center">
